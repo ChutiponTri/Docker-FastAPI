@@ -16,10 +16,27 @@ Ensure you have the following installed on your machine:
     cd docker-fastapi
     ```
 
-2. Create a `.env` file in the project root directory with the following content:
+2. Copy the `env.template.txt` file to a new file named `.env` in the project root directory:
+    ```bash
+    cp env.template.txt .env
+    ```
+
+3. Edit the `.env` file to configure your MongoDB settings:
     ```dotenv
-    DB_NAME=your_database_name
-    DB_COLLECTION=your_collection_name
+    USERNAME=root
+    PASSWORD=example
+
+    DB_ADDRESS=mongodb://root:example@mongo:27017/
+    DB_NAME=ton
+    DB_COLLECTION=data
+
+    MONGO_INITDB_ROOT_USERNAME=root
+    MONGO_INITDB_ROOT_PASSWORD=example
+
+    ME_CONFIG_MONGODB_ADMINUSERNAME=root
+    ME_CONFIG_MONGODB_ADMINPASSWORD=example
+    ME_CONFIG_MONGODB_URL=mongodb://root:example@mongo:27017/
+    ME_CONFIG_BASICAUTH=false
     ```
 
 ## Running the Application

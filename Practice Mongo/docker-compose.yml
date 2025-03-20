@@ -23,6 +23,8 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+    volumes:
+      - ./mongo:/data/db  # Maps the current directory to /app inside the container
     networks:
       - pm-networks
     environment:

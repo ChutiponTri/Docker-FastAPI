@@ -16,7 +16,7 @@ class Users(BaseModel):
 
 # Function to Create New User
 @router.post("/post/users")
-async def create_user(data:Users):
+async def create_user(data: Users):
     database = mongo_client[os.getenv("DB_NAME")]
     collection = database[os.getenv("DB_USER_COLLECTION")]
 
@@ -39,7 +39,7 @@ class Database(BaseModel):
 
 # Function to Create New Data
 @router.post("/post/database")
-async def post_users(data:Database):
+async def post_users(data: Database):
     database = mongo_client[os.getenv("DB_NAME")]
     collection = database[os.getenv("DB_DATA_COLLECTION")]
     collection.insert_one(data.model_dump())

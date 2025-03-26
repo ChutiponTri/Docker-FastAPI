@@ -1,6 +1,6 @@
 # Docker-FastAPI
 
-This project is a FastAPI application running inside a Docker container.
+This project is a FastAPI application running inside a Docker container. The application primarily uses FastAPI to connect to a MongoDB database via `pymongo.MongoClient`, allowing data retrieval and insertion into the database.
 
 ## Prerequisites
 

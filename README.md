@@ -46,3 +46,11 @@ To run the FastAPI app with Docker, use the following command:
 
 ```bash
 docker compose up
+```
+
+## API Request Templates
+
+A Jupyter Notebook (`fast_api.ipynb`) containing example GET and POST request templates is available in the main directory. You can use it to test API endpoints easily.
+
+For detailed API usage, refer to the notebook for step-by-step request examples.
+

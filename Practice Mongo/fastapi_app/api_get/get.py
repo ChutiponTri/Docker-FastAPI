@@ -47,14 +47,7 @@ async def get_data(
 ):
     database = mongo_client[os.getenv("DB_NAME")]
     collection = database[os.getenv("DB_DATA_COLLECTION")]
-    query = {
-        "hn": hn if hn else "",
-        "x": x if x else "",
-        "y": y if y else "",
-        "z": z if z else "",
-        "visibility": visibility if visibility else ""
-    }
-    query = {key: val for key, val in query.items() if val != ""}
+    query = {key: val for key, val in locals().items() if key != "database" and key != "collection" and val is not None}
     data = list(collection.find(query, {"_id": 0}))                 # Exclude `_id`
     response = {"status": "ok", "data": serialize_object_id(data)}
     return response

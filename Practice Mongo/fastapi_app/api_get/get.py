@@ -19,7 +19,7 @@ def serialize_object_id(obj):
 
 # Function to Retrieve Existing User
 @router.get("/get/user")
-async def get_users(hn:str):
+async def get_user(hn: str):
     database = mongo_client[os.getenv("DB_NAME")]
     collection = database[os.getenv("DB_USER_COLLECTION")]
     query = {"hn": hn}

@@ -26,18 +26,18 @@ Ensure you have the following installed on your machine:
     USERNAME=root
     PASSWORD=example
 
-    DB_ADDRESS=mongodb://root:example@mongo:27017/
-    DB_NAME=preme
+    DB_ADDRESS = mongodb://root:example@mongo:27017/
+    DB_NAME = preme
     DB_USER_COLLECTION = user
     DB_DATA_COLLECTION = data
 
-    MONGO_INITDB_ROOT_USERNAME=root
-    MONGO_INITDB_ROOT_PASSWORD=example
+    MONGO_INITDB_ROOT_USERNAME = root
+    MONGO_INITDB_ROOT_PASSWORD = example
 
-    ME_CONFIG_MONGODB_ADMINUSERNAME=root
-    ME_CONFIG_MONGODB_ADMINPASSWORD=example
-    ME_CONFIG_MONGODB_URL=mongodb://root:example@mongo:27017/
-    ME_CONFIG_BASICAUTH=false
+    ME_CONFIG_MONGODB_ADMINUSERNAME = root
+    ME_CONFIG_MONGODB_ADMINPASSWORD = example
+    ME_CONFIG_MONGODB_URL = mongodb://root:example@mongo:27017/
+    ME_CONFIG_BASICAUTH = false
     ```
 
 ## Running the Application

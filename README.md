@@ -27,8 +27,9 @@ Ensure you have the following installed on your machine:
     PASSWORD=example
 
     DB_ADDRESS=mongodb://root:example@mongo:27017/
-    DB_NAME=ton
-    DB_COLLECTION=data
+    DB_NAME=preme
+    DB_USER_COLLECTION = user
+    DB_DATA_COLLECTION = data
 
     MONGO_INITDB_ROOT_USERNAME=root
     MONGO_INITDB_ROOT_PASSWORD=example

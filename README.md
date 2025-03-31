@@ -23,21 +23,13 @@ Ensure you have the following installed on your machine:
 
 3. Edit the `.env` file to configure your MongoDB settings:
     ```dotenv
-    USERNAME=root
-    PASSWORD=example
+    DB_USERNAME=YOUR_USERNAME
+    DB_ PASSWORD=YOUR_PASSWORD
 
-    DB_ADDRESS = mongodb://root:example@mongo:27017/
-    DB_NAME = preme
-    DB_USER_COLLECTION = user
-    DB_DATA_COLLECTION = data
-
-    MONGO_INITDB_ROOT_USERNAME = root
-    MONGO_INITDB_ROOT_PASSWORD = example
-
-    ME_CONFIG_MONGODB_ADMINUSERNAME = root
-    ME_CONFIG_MONGODB_ADMINPASSWORD = example
-    ME_CONFIG_MONGODB_URL = mongodb://root:example@mongo:27017/
-    ME_CONFIG_BASICAUTH = false
+    DB_ADDRESS = mongodb://YOUR_USERNAME:YOUR_PASSWORD@mongo:27017/
+    DB_NAME = YOUR_DATABASE_NAME
+    DB_USER_COLLECTION = YOUR_USER_COLLECTION
+    DB_DATA_COLLECTION = YOUR_DATA_COLLECTION
     ```
 
 ## Running the Application

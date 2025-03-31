@@ -24,7 +24,7 @@ Ensure you have the following installed on your machine:
 3. Edit the `.env` file to configure your MongoDB settings:
     ```dotenv
     DB_USERNAME=YOUR_USERNAME
-    DB_ PASSWORD=YOUR_PASSWORD
+    DB_PASSWORD=YOUR_PASSWORD
 
     DB_ADDRESS = mongodb://YOUR_USERNAME:YOUR_PASSWORD@mongo:27017/
     DB_NAME = YOUR_DATABASE_NAME

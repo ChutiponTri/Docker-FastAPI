@@ -23,14 +23,12 @@ services:
     image: mongo
     ports:
       - "27017:27017"
-    volumes:
-      - ./mongo:/data/db  # Maps the current directory to /app inside the container
     networks:
       - pm-networks
     environment:
-      TZ: "Asia/Bangkok"
-    env_file:
-      - .env
+      - MONGO_INITDB_ROOT_USERNAME = ${USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD = ${PASSWORD}
+      - TZ = Asia/Bangkok
 
   # Mongo Express
   mongo-express:
@@ -40,9 +38,11 @@ services:
     networks:
       - pm-networks
     environment:
-      TZ: "Asia/Bangkok"
-    env_file:
-      - .env
+      - ME_CONFIG_MONGODB_ADMINUSERNAME = ${USERNAME}
+      - ME_CONFIG_MONGODB_ADMINPASSWORD = ${PASSWORD}
+      - ME_CONFIG_MONGODB_URL = ${DB_ADDRESS}
+      - ME_CONFIG_BASICAUTH = false
+      - TZ = Asia/Bangkok
 
 networks:
   pm-networks:

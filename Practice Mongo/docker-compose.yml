@@ -10,7 +10,7 @@ services:
     volumes:
       - ./fastapi_app:/fastapi_app  # Maps the current directory to /app inside the container
     ports:
-      - "8305:8305"
+      - 8305:8305
     networks:
       - pm-networks
     environment:
@@ -22,7 +22,7 @@ services:
   mongo:
     image: mongo
     ports:
-      - "27017:27017"
+      - 27017:27017
     networks:
       - pm-networks
     environment:
@@ -34,7 +34,7 @@ services:
   mongo-express:
     image: mongo-express
     ports:
-      - "8081:8081"
+      - 8081:8081
     networks:
       - pm-networks
     environment:
@@ -44,6 +44,17 @@ services:
       ME_CONFIG_BASICAUTH: false
       TZ: "Asia/Bangkok"
 
+  # Nginx Service
+  web:
+    image: nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - pm-networks
+  
 networks:
   pm-networks:
     driver: bridge
